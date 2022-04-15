@@ -34,6 +34,10 @@ a {
   color: inherit;
 }
 
+h1, h2, p {
+  margin: 0.6em 0 0.2em;
+}
+
 #wrapper {
   display: flex;
   flex-direction: column;
@@ -42,4 +46,11 @@ a {
 
 #main {
   flex-grow: 1;
+  max-width: 112rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
 }
