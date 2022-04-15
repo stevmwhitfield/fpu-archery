@@ -5,12 +5,12 @@ export default {
   fields: [
     {
       name: "status",
-      title: "Is Cancelled?",
+      title: "Is Practice Cancelled Today?",
       type: "boolean",
       description: "Enable this option if practice is cancelled.",
     },
     {
-      name: "practice-days",
+      name: "days",
       title: "Practice Days",
       type: "string",
       initialValue: "Tuesday, Wednesday, Friday",
@@ -18,11 +18,12 @@ export default {
         "Enter the days practice will be held. (e.g. Tuesday, Wednesday, Friday)",
     },
     {
-      name: "practice-times",
+      name: "times",
       title: "Practice Times",
       type: "string",
       initialValue: "3:00 PM to 5:00 PM",
-      description: "Enter the time range for practice.",
+      description:
+        "Enter the time range for practice - format: H:MM PM to H:MM PM.",
     },
   ],
 };
