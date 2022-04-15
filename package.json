@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "echo 'Building Sanity to public/admin' && cd fpuarcherycms && npm i && npx @sanity/cli build ../public/admin -y && echo 'Done'",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -12,6 +13,7 @@
     "axios": "^0.26.1",
     "dotenv": "^16.0.0",
     "next": "12.1.5",
+    "next-sanity": "^0.5.2",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "sass": "^1.50.0"
