@@ -20,6 +20,31 @@ const HomePage = ({ content }) => {
     setIsCancelled(content.status);
   }, []);
 
+  // call when next day
+  const resetStatus = () => {
+    const mutations = [
+      {
+        patch: {
+          id: content._id,
+          set: { status: false },
+        },
+      },
+    ];
+
+    fetch("https://5k3ranel.api.sanity.io/v2021-03-25/data/mutate/production", {
+      method: "post",
+      headers: {
+        "Content-type": "application/json",
+        Authorization:
+          "Bearer skPaj3QBVbpNxCAYH78dDnaeeNr9iWwhYXGPMWqOv5pPH5XXMwgPJD3KhWJXGgScqSsTk8qw7IQSgNgDt",
+      },
+      body: JSON.stringify({ mutations }),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div id="wrapper">
       <Header />
