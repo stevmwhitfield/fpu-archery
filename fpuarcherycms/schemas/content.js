@@ -25,5 +25,11 @@ export default {
       description:
         "Enter the time range for practice - format: H:MM PM to H:MM PM.",
     },
+    {
+      name: "date",
+      Title: "Date",
+      type: "datetime",
+      description: "DO NOT CHANGE. THIS VALUE IS USED INTERNALLY.",
+    },
   ],
 };

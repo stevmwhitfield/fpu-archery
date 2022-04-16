@@ -9,7 +9,8 @@ const query = `
     _id,
     days,
     times,
-    status
+    status,
+    date
   }
 `;
 
@@ -18,15 +19,22 @@ const HomePage = ({ content }) => {
 
   useEffect(() => {
     setIsCancelled(content.status);
+
+    const today = new Date();
+    const resetDate = new Date(content.date);
+    const temp = new Date();
+    temp.setDate(resetDate.getDate() + 1);
+    if (today > resetDate) {
+      resetStatus(temp);
+    }
   }, []);
 
-  // call when next day
-  const resetStatus = () => {
+  const resetStatus = (newDate) => {
     const mutations = [
       {
         patch: {
           id: content._id,
-          set: { status: false },
+          set: { status: false, date: newDate.toISOString() },
         },
       },
     ];
