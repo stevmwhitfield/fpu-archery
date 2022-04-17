@@ -1,6 +1,6 @@
 #header {
   padding: 1.2rem 1.2rem 0;
-  height: 10.8rem;
+  height: 16.2rem;
   max-width: 112rem;
   width: 100%;
   margin: 0 auto;
@@ -9,56 +9,15 @@
 #nav {
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 
   #logo {
-    max-height: 9.6rem;
+    max-height: 15rem;
 
     a {
       display: inline-block;
       max-height: 9.6rem;
-    }
-  }
-
-  .nav-list {
-    display: flex;
-    align-items: center;
-    height: 50%;
-    gap: 1.6rem;
-
-    .nav-item {
-      display: inline-block;
-      height: 100%;
-      font-weight: bold;
-
-      &:first-child {
-        display: none;
-      }
-
-      .nav-link {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0 1.6rem;
-        font-size: 2.4rem;
-      }
-    }
-  }
-}
-
-@media screen and (min-width: 30em) {
-  #nav {
-    #logo {
-      margin-right: 2.4rem;
-    }
-    .nav-list {
-      gap: 2.4rem;
-
-      .nav-item:first-child {
-        display: inline-block;
-      }
     }
   }
 }

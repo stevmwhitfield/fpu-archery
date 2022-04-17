@@ -1,10 +1,40 @@
 .alert {
-    font-weight: bold;
-    color: #f00;
-    text-align: center;
+  font-weight: bold;
+  color: #f00;
+  text-align: center;
 }
 
 .section {
-    margin: 4.8rem 0;
-    text-align: center;
+  margin: 6.4rem 0;
+  text-align: center;
+}
+
+.button-link {
+  color: #4169e1;
+  text-transform: uppercase;
+  border: 2px solid #4169e1;
+  border-radius: 0.8rem;
+  padding: 0.5em 0.8em;
+  transition: 0.2s all;
+
+  &:hover {
+    color: darken(#4169e1, 10);
+    border-color: darken(#4169e1, 10);
+  }
+  &:active {
+    color: darken(#4169e1, 20);
+    border-color: darken(#4169e1, 20);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-height: 56em), (min-width: 30em) {
+  .section {
+    margin: 9.6rem 0;
+  }
 }

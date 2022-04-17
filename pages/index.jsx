@@ -1,6 +1,7 @@
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { sanityClient } from "../lib/sanity";
 import styles from "../styles/Home.module.scss";
 
@@ -66,6 +67,13 @@ const HomePage = ({ content }) => {
             <h2>Practice Info</h2>
             <p>{content.times}</p>
             <p>{content.days}</p>
+          </article>
+        </section>
+        <section className={styles.section}>
+          <article>
+            <Link href="/weather" passHref>
+              <a className={styles["button-link"]}>see the weather</a>
+            </Link>
           </article>
         </section>
       </main>

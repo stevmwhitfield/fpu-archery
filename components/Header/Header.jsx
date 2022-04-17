@@ -10,28 +10,14 @@ const Header = () => {
           <Link href="/" passHref>
             <a>
               <Image
-                src={
-                  "https://floridapoly.edu/student-affairs/student-development/teams/assets/archery/archery-mark-small.png"
-                }
+                src={"/florida-poly-archery.png"}
                 alt={"FPU Archery Logo"}
-                width={128}
-                height={96}
+                width={200}
+                height={150}
               />
             </a>
           </Link>
         </div>
-        <ul className={styles["nav-list"]}>
-          <li className={styles["nav-item"]}>
-            <Link href="/" passHref>
-              <a className={styles["nav-link"]}>Home</a>
-            </Link>
-          </li>
-          <li className={styles["nav-item"]}>
-            <Link href="/weather" passHref>
-              <a className={styles["nav-link"]}>Weather</a>
-            </Link>
-          </li>
-        </ul>
       </nav>
     </header>
   );

@@ -2,6 +2,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { useState, useEffect } from "react";
 import Card from "../components/Weather/Card";
+import styles from "../styles/Weather.module.scss";
 
 const WeatherPage = () => {
   const [weatherData, setWeatherData] = useState([]);
@@ -42,7 +43,7 @@ const WeatherPage = () => {
         {isLoading ? (
           <h2 className="page-header">Loading weather data...</h2>
         ) : null}
-        <section>
+        <section className={styles.section}>
           {weatherData.length > 0
             ? weatherData.map((hour, i) => {
                 if (i > 12) {
