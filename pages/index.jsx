@@ -21,13 +21,15 @@ const HomePage = ({ content }) => {
   useEffect(() => {
     setIsCancelled(content.status);
 
-    const today = new Date();
-    const resetDate = new Date(content.date);
-    const temp = new Date();
-    temp.setDate(resetDate.getDate() + 1);
-    if (today > resetDate) {
-      resetStatus(temp);
-    }
+    // DOES NOT WORK AS INTENDED - STATUS MUST BE MANUALLY RESET
+    // ---------------------------------------------------------
+    // const today = new Date();
+    // const resetDate = new Date(content.date);
+    // const temp = new Date();
+    // temp.setDate(resetDate.getDate() + 1);
+    // if (today > resetDate) {
+    //   resetStatus(temp);
+    // }
   }, []);
 
   const resetStatus = (newDate) => {
