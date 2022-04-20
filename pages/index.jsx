@@ -19,7 +19,6 @@ const HomePage = ({ content }) => {
   const [isCancelled, setIsCancelled] = useState(false);
 
   useEffect(() => {
-    console.log(content.status);
     setIsCancelled(content.status);
   }, []);
 
