@@ -53,7 +53,7 @@ const HomePage = ({ content }) => {
 
 export default HomePage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await sanityClient.fetch(query);
   const content = data[0];
   return { props: { content } };
