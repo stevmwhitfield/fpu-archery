@@ -37,6 +37,13 @@ const WeatherPage = () => {
 
   return (
     <div id="wrapper">
+      <Head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Lakeland Weather - Florida Poly Archery</title>
+        <link rel="icon" type="image" href="/favicon.png" />
+      </Head>
       <Header />
       <main id="main">
         <h1 className="page-header">Lakeland Weather</h1>

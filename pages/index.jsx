@@ -2,6 +2,7 @@ import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { sanityClient } from "../lib/sanity";
 import styles from "../styles/Home.module.scss";
 
@@ -24,6 +25,13 @@ const HomePage = ({ content }) => {
 
   return (
     <div id="wrapper">
+      <Head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Florida Poly Archery</title>
+        <link rel="icon" type="image" href="/favicon.png" />
+      </Head>
       <Header />
       <main id="main">
         <h1 className="page-header">Florida Poly Archery</h1>
