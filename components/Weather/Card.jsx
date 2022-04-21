@@ -7,6 +7,7 @@ const Card = ({
   humidity,
   uvi,
   wind_speed,
+  wind_gust = 0,
   weather,
   pop,
 }) => {
@@ -22,9 +23,17 @@ const Card = ({
       <div className={styles["card-content"]}>
         <p>Feels like: {Math.ceil(feels_like)} &deg;F</p>
         <p>UV Index: {uvi}</p>
-        <p>Humidity: {humidity}%</p>
         <p>Chance of rain: {Math.round(pop * 100)}%</p>
-        <p className={styles["span-2"]}>Wind speed: {wind_speed} mph</p>
+        <p>Humidity: {humidity}%</p>
+
+        {wind_gust === 0 ? (
+          <p className={styles["span-2"]}>Wind: {wind_speed} mph</p>
+        ) : (
+          <>
+            <p>Wind: {wind_speed} mph</p>
+            <p>Gusts: {wind_gust} mph</p>
+          </>
+        )}
       </div>
     </article>
   );

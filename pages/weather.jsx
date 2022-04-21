@@ -73,6 +73,23 @@ const WeatherPage = () => {
                     hourlyTime = "12 AM";
                   }
 
+                  if (hour.wind_gust) {
+                    return (
+                      <Card
+                        key={i}
+                        time={hourlyTime}
+                        temp={temp}
+                        feels_like={feels_like}
+                        humidity={humidity}
+                        uvi={uvi}
+                        wind_speed={wind_speed}
+                        wind_gust={hour.wind_gust}
+                        weather={weather[0]}
+                        pop={pop}
+                      />
+                    );
+                  }
+
                   return (
                     <Card
                       key={i}
