@@ -1,6 +1,7 @@
+import Head from "next/head";
+import { useState, useEffect } from "react";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import { useState, useEffect } from "react";
 import Card from "../components/Weather/Card";
 import styles from "../styles/Weather.module.scss";
 
